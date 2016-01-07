@@ -32,7 +32,7 @@ public class Command_pvp extends TFM_Command
             dhelmet, dchestplate, dleggings, dboots, dsword, gapple 
         });
         player.setGameMode(GameMode.SURVIVAL);
-        playerMsg("You have been given PVP items");
+        playerMsg("You have been given PVP items and your gamemode was set to survival");
         
         return true;
                 
