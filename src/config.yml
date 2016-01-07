@@ -1,18 +1,18 @@
 #
-# TotalFreedomMod v4.3 Configuration
-# by Madgeek1450 and Prozza
+# ToastFreedomMod v1.2 Configuration
+# By PacksGamingHD
 #
 
 # Generic server information
 server:
   # You should change this to your server's name
-  name: TotalFreedom
+  name: ToastFreedom
 
   # The address your server is located at. Please do not include the port.
   address: play.totalfreedom.me
 
   # Shown at the server list
-  motd: TotalFreedom &8- Minecraft %mcversion%
+  motd: ToastFreedom &8- Minecraft %mcversion%
 
   # Every word in the MOTD will be a different color unless prefixed by a color code
   colorful_motd: true
@@ -87,7 +87,6 @@ allow:
 blocked_commands:
   # Disabled commands
   - 'n:b:/time:Server-side time changing is disabled. Please use /ptime to set your own personal time.'
-  - 'n:b:/gamemode:Use /creative and /survival to set your gamemode.'
   - 'n:b:/ban:_'
   - 'n:b:/pardon:_'
   - 'n:b:/ban-ip:_'
@@ -212,7 +211,7 @@ announcer:
   interval: 600
 
   # Prefix for all announcements
-  prefix: '&5[&eTotalFreedom&5] &b'
+  prefix: '&5[&eToastFreedom&5] &b'
 
   announcements:
     - 'Be sure to visit our forums at &6http://totalfreedom.boards.net/'
