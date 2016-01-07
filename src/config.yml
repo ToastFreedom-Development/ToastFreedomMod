@@ -36,7 +36,7 @@ forceip:
 # Rank Configuration
   sysadmins:
       - FUNDRAGON123
-  executive:
+  executives:
       - Premintex
   # Note: The owner rank is removed for security reasons and is hardcoded instead
 
