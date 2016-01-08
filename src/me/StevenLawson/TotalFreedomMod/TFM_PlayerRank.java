@@ -93,7 +93,7 @@ public enum TFM_PlayerRank
             }
             if (TFM_ConfigEntry.SERVER_EXECUTIVES.getList().contains(sender.getName()))
             {
-                return SYSADMIN;
+                return EXECUTIVE;
             }
 
             if (entry.isSeniorAdmin())
