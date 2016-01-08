@@ -40,6 +40,16 @@ forceip:
   # The kick message sent to players when logging in with the wrong hostname
   kickmsg: You have been kicked from the server - Please connect using %address%
 
+<<<<<<< HEAD
+=======
+# Rank Configuration
+  sysadmins:
+      - FUNDRAGON123
+  executives:
+      - Premintex
+  # Note: The owner rank is removed for security reasons and is hardcoded instead
+
+>>>>>>> origin/master
 # Blocking certain events
 allow:
   fire_place: false
