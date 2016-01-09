@@ -15,7 +15,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
 @CommandPermissions(level = AdminLevel.OP, source = SourceType.BOTH, blockHostConsole = true)
-@CommandParameters(description = "Toast doom command", usage = "/<command> <playername>")
+@CommandParameters(description = "Packs doom command", usage = "/<command> <playername>")
 public class Command_packsdoom extends TFM_Command
 {
     @Override

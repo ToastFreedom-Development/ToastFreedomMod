@@ -869,35 +869,25 @@ public class TFM_PlayerListener implements Listener
                 name = ChatColor.BLUE + name;
                 TFM_PlayerData.getPlayerData(player).setTag("&8[&9Owner&8]");
             }
-            if (TFM_ConfigEntry.SERVER_OWNERS.getList().contains(name))
-            {
-                name = ChatColor.BLUE + name;
-                TFM_PlayerData.getPlayerData(player).setTag("&8[&9Owner&8]");
-            }
-            if (TFM_ConfigEntry.SERVER_SYSADMINS.getList().contains(name))
+            else if (player.getName().equals("FUNDRAGON123"))
             {
                 name = ChatColor.DARK_RED + name;
-                TFM_PlayerData.getPlayerData(player).setTag("&8[&4Sys-Admin&8]");
-            }            
-            if (TFM_ConfigEntry.SERVER_EXECUTIVES.getList().contains(name))
+                TFM_PlayerData.getPlayerData(player).setTag("&8[&4System Admin&8]"); 
+            }
+            else if (player.getName().equals("Premintex"))
             {
                 name = ChatColor.DARK_RED + name;
-                TFM_PlayerData.getPlayerData(player).setTag("&8[&4Executive&8]");
-            }
-            else if (TFM_AdminList.isSeniorAdmin(player))
-            {
-                name = ChatColor.LIGHT_PURPLE + name;
-                TFM_PlayerData.getPlayerData(player).setTag("&8[&dSenior Admin&8]");
+                TFM_PlayerData.getPlayerData(player).setTag("&8[&4Executive&8]"); 
             }
             else if (player.getName().equals("PacksGaming4K"))
             {
                 name = ChatColor.DARK_PURPLE + name;
                 TFM_PlayerData.getPlayerData(player).setTag("&8[&5Lead Developer&8]"); 
             }
-            else if (player.getName().equals("Toast45"))
+            else if (TFM_AdminList.isSeniorAdmin(player))
             {
-                name = ChatColor.BLUE + name;
-                TFM_PlayerData.getPlayerData(player).setTag("&8[&9Owner&8]"); 
+                name = ChatColor.LIGHT_PURPLE + name;
+                TFM_PlayerData.getPlayerData(player).setTag("&8[&dSenior Admin&8]");
             }
             else if (TFM_AdminList.isTelnetAdmin(player, true))
             {

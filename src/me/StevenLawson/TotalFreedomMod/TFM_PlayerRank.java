@@ -16,10 +16,10 @@ public enum TFM_PlayerRank
     TELNET("a " + ChatColor.DARK_GREEN + "Super Telnet Admin", ChatColor.DARK_GREEN + "[STA]"),
     SENIOR("a " + ChatColor.LIGHT_PURPLE + "Senior Admin", ChatColor.LIGHT_PURPLE + "[SrA]"),
     OWNER("the " + ChatColor.BLUE + "Owner", ChatColor.BLUE + "[Owner]"),
-    CONSOLE("The " + ChatColor.DARK_PURPLE + "Console", ChatColor.DARK_PURPLE + "[Console]"),
-    SYSADMIN("a " + ChatColor.DARK_RED + "System Admin", ChatColor.DARK_PURPLE + "[Sys-Admin]"),
-    EXECUTIVE("an " + ChatColor.DARK_RED + "Executive", ChatColor.DARK_PURPLE + "[Executive]"),
-    LEADDEV("the " + ChatColor.DARK_PURPLE + "Lead Developer", ChatColor.DARK_PURPLE + "[Lead-Dev]");
+    SYSTEMADMIN("a "+ ChatColor.DARK_RED + "System Admin", ChatColor.DARK_RED + "[Sys-Admin]"),
+    EXECUTIVE("an "+ ChatColor.DARK_RED + "Executive", ChatColor.DARK_RED + "[Executive]"),
+    LEADDEV("the " + ChatColor.DARK_PURPLE + "Lead Developer", ChatColor.DARK_PURPLE + "[Lead-Dev]"),
+    CONSOLE("The " + ChatColor.DARK_PURPLE + "Console", ChatColor.DARK_PURPLE + "[Console]");
     private final String loginMessage;
     private final String prefix;
 
@@ -72,6 +72,14 @@ public enum TFM_PlayerRank
         {
             return DEVELOPER;
         }
+        if (sender.getName().equals("FUNDRAGON123"))
+        {
+            return SYSTEMADMIN;
+        }
+        if (sender.getName().equals("Premintex"))
+        {
+            return EXECUTIVE;
+        }
         if (sender.getName().equals("PacksGaming4K"))
         {
             return LEADDEV;
@@ -83,17 +91,9 @@ public enum TFM_PlayerRank
 
         if (entry != null && entry.isActivated())
         {
-            if (sender.getName().equals("Toast45"))
+            if (TFM_ConfigEntry.SERVER_OWNERS.getList().contains(sender.getName()))
             {
                 return OWNER;
-            }
-            if (TFM_ConfigEntry.SERVER_SYSADMINS.getList().contains(sender.getName()))
-            {
-                return SYSADMIN;
-            }
-            if (TFM_ConfigEntry.SERVER_EXECUTIVES.getList().contains(sender.getName()))
-            {
-                return EXECUTIVE;
             }
 
             if (entry.isSeniorAdmin())

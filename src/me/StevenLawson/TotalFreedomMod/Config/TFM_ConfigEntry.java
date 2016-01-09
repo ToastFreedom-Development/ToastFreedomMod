@@ -84,9 +84,7 @@ public enum TFM_ConfigEntry
     NOADMIN_IPS(List.class, "noadmin_ips"),
     ADMIN_ONLY_MODE(Boolean.class, "admin_only_mode"),
     AUTO_ENTITY_WIPE(Boolean.class, "auto_wipe"),
-    CONSOLE_IS_SENIOR(Boolean.class, "console_is_senior"),
-    SERVER_SYSADMINS(Boolean.class, "server.sysadmins"),
-    SERVER_EXECUTIVES(Boolean.class, "server.executives");
+    CONSOLE_IS_SENIOR(Boolean.class, "console_is_senior");
     //
     private final Class<?> type;
     private final String configName;

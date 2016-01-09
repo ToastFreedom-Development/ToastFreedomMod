@@ -77,7 +77,7 @@ public class TotalFreedomMod extends JavaPlugin
     @Override
     public void onEnable()
     {
-        TFM_Log.info("Made by PacksGaming4K");
+        TFM_Log.info("Made by Madgeek1450 and Prozza");
         TFM_Log.info("Compiled " + buildDate + " by " + buildCreator);
 
         final TFM_Util.MethodTimer timer = new TFM_Util.MethodTimer();
@@ -127,7 +127,7 @@ public class TotalFreedomMod extends JavaPlugin
         }
         catch (Exception ex)
         {
-            TFM_Log.warning("Could not load world: flatlands");
+            TFM_Log.warning("Could not load world: Flatlands");
         }
 
         try
@@ -136,7 +136,7 @@ public class TotalFreedomMod extends JavaPlugin
         }
         catch (Exception ex)
         {
-            TFM_Log.warning("Could not load world: adminworld");
+            TFM_Log.warning("Could not load world: AdminWorld");
         }
 
         // Initialize game rules
@@ -173,7 +173,8 @@ public class TotalFreedomMod extends JavaPlugin
         timer.update();
 
         TFM_Log.info("Version " + pluginVersion + " for " + TFM_ServerInterface.COMPILE_NMS_VERSION + " enabled in " + timer.getTotal() + "ms");
-        
+
+        // Metrics @ http://mcstats.org/plugin/TotalFreedomMod
         try
         {
             final Metrics metrics = new Metrics(plugin);
@@ -190,6 +191,8 @@ public class TotalFreedomMod extends JavaPlugin
             public void run()
             {
                 TFM_CommandLoader.scan();
+
+                // Add spawnpoints later - https://github.com/TotalFreedom/TotalFreedomMod/issues/438
                 TFM_ProtectedArea.autoAddSpawnpoints();
             }
         }.runTaskLater(plugin, 20L);
@@ -231,7 +234,7 @@ public class TotalFreedomMod extends JavaPlugin
         }
         catch (Exception ex)
         {
-            TFM_Log.severe("Could not load app properties!");
+            TFM_Log.severe("Could not load App properties!");
             TFM_Log.severe(ex);
         }
     }
