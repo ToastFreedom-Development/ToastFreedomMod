@@ -12,10 +12,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
-@CommandParameters(description = "Someone being a little bitch? Smite them down...", usage = "/<command> [playername] [reason]")
+@CommandParameters(description = "Someone being a little fucking cock sucking bitch? Smite them down...", usage = "/<command> [playername] [reason]")
 public class Command_smite extends TFM_Command
 {
-
     @Override
     public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
@@ -34,21 +33,21 @@ public class Command_smite extends TFM_Command
         else if (args.length > 1)
         {
             final String reason = StringUtils.join(ArrayUtils.subarray(args, 1, args.length), " ");
-            smite(player, reason);
+            smite(sender, player, reason);
             return true;
         }
+
         else
         {
-            smite(player);
+            sender.sendMessage(ChatColor.RED + "Please supply a reason in order to smite someone.");
+            return true;
         }
-
-        return true;
     }
 
-    public static void smite(final Player player, final String reason)
+    public static void smite(final CommandSender sender, final Player player, final String reason)
     {
-        TFM_Util.bcastMsg(String.format("%s has been a naughty, naughty boy.\n" + ChatColor.GOLD + "Reason: %s", player.getName(), reason), ChatColor.RED);
-        String full = String.format(ChatColor.RED + "%s has been smitten for %s", player.getName(), reason);
+        TFM_Util.bcastMsg(String.format("%s has been a naughty, naughty person.\nThey have thus been smitten!\n" + ChatColor.GOLD + "Reason: %s (%s)", player.getName(), reason, sender.getName()), ChatColor.RED);
+        String full = String.format(ChatColor.RED + "%s has been smitten for %s", player.getName(), reason + " (" + sender.getName() + ")");
 
         //Deop
         player.setOp(false);
@@ -77,7 +76,7 @@ public class Command_smite extends TFM_Command
 
     public static void smite(final Player player)
     {
-        TFM_Util.bcastMsg(player.getName() + " has been a naughty, naughty boy.", ChatColor.RED);
+        TFM_Util.bcastMsg(player.getName() + " has been a naughty, naughty boy and They have thus been smitten!", ChatColor.RED);
 
         //Deop
         player.setOp(false);
