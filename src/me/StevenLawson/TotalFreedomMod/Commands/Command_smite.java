@@ -47,7 +47,7 @@ public class Command_smite extends TFM_Command
 
     public static void smite(final Player player, final String reason)
     {
-        TFM_Util.bcastMsg(String.format("%s has been a naughty, naughty person.\n" + ChatColor.GOLD + "Reason: %s", player.getName(), reason), ChatColor.RED);
+        TFM_Util.bcastMsg(String.format("%s has been a naughty, naughty boy.\n" + ChatColor.GOLD + "Reason: %s", player.getName(), reason), ChatColor.RED);
         String full = String.format(ChatColor.RED + "%s has been smitten for %s", player.getName(), reason);
 
         //Deop
@@ -77,7 +77,7 @@ public class Command_smite extends TFM_Command
 
     public static void smite(final Player player)
     {
-        TFM_Util.bcastMsg(player.getName() + " has been a naughty, naughty boy.\nThey have thus been smitten!", ChatColor.RED);
+        TFM_Util.bcastMsg(player.getName() + " has been a naughty, naughty boy.", ChatColor.RED);
 
         //Deop
         player.setOp(false);
