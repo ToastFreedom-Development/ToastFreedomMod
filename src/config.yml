@@ -97,6 +97,7 @@ blocked_commands:
   - 'n:b:/save-all:_'
   - 'n:b:/save-on:_'
   - 'n:b:/save-off:_'
+  - 'n:b:/tfm:TotalFreedomMod is a plugin created by Madgeek1450 and Prozza. For more information see github.com/TotalFreedom. For information about ToastFreedoMod please type /toastfreedommod'
 
   # Superadmin commands
   - 's:b:/kick:_'

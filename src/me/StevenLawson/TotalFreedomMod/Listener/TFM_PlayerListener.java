@@ -27,8 +27,14 @@ import me.StevenLawson.TotalFreedomMod.TFM_Sync;
 import me.StevenLawson.TotalFreedomMod.TFM_Util;
 import me.StevenLawson.TotalFreedomMod.TFM_UuidManager;
 import me.StevenLawson.TotalFreedomMod.TotalFreedomMod;
+import static me.StevenLawson.TotalFreedomMod.TotalFreedomMod.server;
 import me.StevenLawson.TotalFreedomMod.World.TFM_AdminWorld;
 import org.apache.commons.lang3.StringUtils;
+import me.StevenLawson.TotalFreedomMod.TFM_Util;
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
@@ -732,6 +738,7 @@ public class TFM_PlayerListener implements Listener
                     TFM_Util.playerMsg(pl, player.getName() + ": " + command);
                 }
             }
+            
         }
     }
 
