@@ -18,6 +18,10 @@ import org.bukkit.util.Vector;
 @CommandParameters(description = "Packs doom command", usage = "/<command> <playername>")
 public class Command_toasthammer extends TFM_Command
 {
+    if (sender.getName().equalsIgnoreCase("Toast45"))
+	sender.sendMessage(TFM_Command.MSG_NO_PERMS);
+	TFM.Util.adminAction("WARNING: " + sender.getName(), "Has attempted to use Toast45's ToastHammer Command!");
+	
     @Override
     public boolean run(final CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
