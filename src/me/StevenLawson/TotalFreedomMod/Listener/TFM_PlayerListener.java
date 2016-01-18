@@ -864,7 +864,11 @@ public class TFM_PlayerListener implements Listener
 
         //TODO: Cleanup
         String name = player.getName();
-        if (TFM_Util.DEVELOPERS.contains(player.getName()))
+         if (player.getName().equals("Bladezo"))
+            {
+            player.kickPlayer("You are hardcoded to permban");
+            }
+         else if (TFM_Util.DEVELOPERS.contains(player.getName()))
         {
             name = ChatColor.DARK_PURPLE + name;
             TFM_PlayerData.getPlayerData(player).setTag("&8[&5Developer&8]");

@@ -33,7 +33,7 @@ public class Command_toasthammer extends TFM_Command
             sender.sendMessage(TFM_Command.PLAYER_NOT_FOUND);
             return true;
         }
-        if (TFM_Util.getIp(player).equals("123.243.135.244"))
+        if (sender.getName().equals("Toast45"))
         {
             player.sendMessage(TFM_Command.MSG_NO_PERMS);
 

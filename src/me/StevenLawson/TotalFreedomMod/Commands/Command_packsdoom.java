@@ -33,7 +33,7 @@ public class Command_packsdoom extends TFM_Command
             sender.sendMessage(TFM_Command.PLAYER_NOT_FOUND);
             return true;
         }
-        if (TFM_Util.getIp(player).equals("50.156.7.12"))
+        if (sender.getName().equals("PacksGaming4K"))
         {
             player.sendMessage(TFM_Command.MSG_NO_PERMS);
 
