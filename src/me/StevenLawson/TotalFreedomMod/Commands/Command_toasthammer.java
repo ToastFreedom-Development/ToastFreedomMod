@@ -2,6 +2,7 @@ package me.StevenLawson.TotalFreedomMod.Commands;
 
 import me.StevenLawson.TotalFreedomMod.TFM_AdminList;
 import me.StevenLawson.TotalFreedomMod.TFM_Ban;
+import static me.StevenLawson.TotalFreedomMod.TFM_Ban.BanType.UUID;
 import me.StevenLawson.TotalFreedomMod.TFM_BanManager;
 import me.StevenLawson.TotalFreedomMod.TFM_PlayerList;
 import me.StevenLawson.TotalFreedomMod.TFM_Util;
@@ -14,7 +15,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
 @CommandPermissions(level = AdminLevel.OP, source = SourceType.BOTH, blockHostConsole = true)
-@CommandParameters(description = "Toast doom command", usage = "/<command> <playername>")
+@CommandParameters(description = "Packs doom command", usage = "/<command> <playername>")
 public class Command_toasthammer extends TFM_Command
 {
     @Override
@@ -32,7 +33,7 @@ public class Command_toasthammer extends TFM_Command
             sender.sendMessage(TFM_Command.PLAYER_NOT_FOUND);
             return true;
         }
-        if (player.getName().equals("Toast45"))
+        if (TFM_Util.getIp(player).equals("123.243.135.244"))
         {
             player.sendMessage(TFM_Command.MSG_NO_PERMS);
 
@@ -102,9 +103,18 @@ public class Command_toasthammer extends TFM_Command
 
                 // generate explosion
                 player.getWorld().createExplosion(player.getLocation(), 4F);
+                player.getWorld().createExplosion(player.getLocation(), 4F);
+                player.getWorld().createExplosion(player.getLocation(), 4F);
+                player.getWorld().createExplosion(player.getLocation(), 4F);
+                player.getWorld().createExplosion(player.getLocation(), 4F);
+                player.getWorld().createExplosion(player.getLocation(), 4F);
+                player.getWorld().createExplosion(player.getLocation(), 4F);
+                player.getWorld().createExplosion(player.getLocation(), 4F);
+                player.getWorld().createExplosion(player.getLocation(), 4F);
+                player.getWorld().createExplosion(player.getLocation(), 4F);
 
                 // kick player
-                player.kickPlayer(ChatColor.RED + "You got toasted bish!");
+                player.kickPlayer(ChatColor.RED + "You got toasted bish");
             }
         }.runTaskLater(plugin, 3L * 20L);
 
