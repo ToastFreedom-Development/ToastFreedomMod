@@ -7,7 +7,7 @@ server:
   name: ToastFreedom
 
   # The address your server is located at. Please do not include the port.
-  address: play.totalfreedom.me
+  address: toastfreedom.us.to:27017
 
   # Shown at the server list
   motd: ToastFreedom &8- Minecraft %mcversion%
@@ -98,6 +98,7 @@ blocked_commands:
   - 'n:b:/save-on:_'
   - 'n:b:/save-off:_'
   - 'n:b:/tfm:TotalFreedomMod is a plugin created by Madgeek1450 and Prozza. For more information see github.com/TotalFreedom. For information about ToastFreedoMod please type /toastfreedommod'
+  - 'n:b:/broadcast:_'
 
   # Superadmin commands
   - 's:b:/kick:_'
